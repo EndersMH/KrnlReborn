@@ -51,6 +51,8 @@ titleLabel.Visible = true
 textLabel.Visible = true
 closeButton.Visible = true
 
+-- show this if script updated
+
 -- Button Click Event to Hide the Frame
 closeButton.MouseButton1Click:Connect(function()
     frame.Visible = false
