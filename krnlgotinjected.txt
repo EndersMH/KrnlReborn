@@ -40,8 +40,3 @@ button.Parent = screenGui
 button.MouseButton1Click:Connect(function()
     textLabel.Visible = false
 end)
-
--- Make the Title, TextLabel, and Button visible
-titleLabel.Visible = true
-textLabel.Visible = true
-button.Visible = true
