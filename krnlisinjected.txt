@@ -1,0 +1,59 @@
+-- Create a ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FriendRequestGui"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a Frame for the friend request message
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 150) -- Width and height of the frame
+frame.Position = UDim2.new(0.5, -150, 0.5, -75) -- Position the frame in the center of the screen
+frame.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2) -- Dark grey background
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
+
+-- Create a Title Label
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(0, 300, 0, 40) -- Width and height of the title
+titleLabel.Position = UDim2.new(0, 0, 0, 0) -- Position the title at the top of the frame
+titleLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1) -- Dark grey background
+titleLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 24
+titleLabel.Text = "Krnl"
+titleLabel.Parent = frame
+
+-- Create a TextLabel to display the message
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(0, 280, 0, 60) -- Width and height of the label
+textLabel.Position = UDim2.new(0, 10, 0, 50) -- Position the label below the title
+textLabel.BackgroundColor3 = Color3.new(0.3, 0.3, 0.3) -- Darker grey background
+textLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+textLabel.Font = Enum.Font.SourceSans
+textLabel.TextSize = 18
+textLabel.TextWrapped = true -- Wrap the text if it is too long
+textLabel.Parent = frame
+textLabel.Text = " Krnl Is Injected!"
+
+-- Create a Close Button
+local closeButton = Instance.new("TextButton")
+closeButton.Size = UDim2.new(0, 100, 0, 40) -- Width and height of the button
+closeButton.Position = UDim2.new(0.5, -50, 1, -50) -- Position the button at the bottom of the frame
+closeButton.BackgroundColor3 = Color3.new(1, 0, 0) -- Red background
+closeButton.TextColor3 = Color3.new(1, 1, 1) -- White text
+closeButton.Font = Enum.Font.SourceSans
+closeButton.TextSize = 18
+closeButton.Text = "Close"
+closeButton.Parent = frame
+
+-- Make the Frame, Title, TextLabel, and Button visible
+frame.Visible = true
+titleLabel.Visible = true
+textLabel.Visible = true
+closeButton.Visible = true
+
+-- show this if script updated
+
+-- Button Click Event to Hide the Frame
+closeButton.MouseButton1Click:Connect(function()
+    frame.Visible = false
+end)
