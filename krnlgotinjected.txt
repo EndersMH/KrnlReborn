@@ -1,0 +1,47 @@
+-- Create a ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MessageGui"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a Title Label
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(0, 200, 0, 50) -- Width and height of the title
+titleLabel.Position = UDim2.new(0.5, -100, 0.5, -125) -- Position the title above the message
+titleLabel.BackgroundColor3 = Color3.new(0.1, 0.1, 0.1) -- Dark grey background
+titleLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+titleLabel.Font = Enum.Font.SourceSansBold
+titleLabel.TextSize = 28
+titleLabel.Text = "Krnl"
+titleLabel.Parent = screenGui
+
+-- Create a TextLabel
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(0, 200, 0, 50) -- Width and height of the label
+textLabel.Position = UDim2.new(0.5, -100, 0.5, -75) -- Position the label below the title
+textLabel.BackgroundColor3 = Color3.new(0, 0, 0) -- Black background
+textLabel.TextColor3 = Color3.new(1, 1, 1) -- White text
+textLabel.Font = Enum.Font.SourceSans
+textLabel.TextSize = 24
+textLabel.Text = "Krnl Is Injected!"
+textLabel.Parent = screenGui
+
+-- Create a Button
+local button = Instance.new("TextButton")
+button.Size = UDim2.new(0, 200, 0, 50) -- Width and height of the button
+button.Position = UDim2.new(0.5, -100, 0.5, 0) -- Position the button in the center of the screen
+button.BackgroundColor3 = Color3.new(1, 0, 0) -- Red background
+button.TextColor3 = Color3.new(1, 1, 1) -- White text
+button.Font = Enum.Font.SourceSans
+button.TextSize = 24
+button.Text = "Close"
+button.Parent = screenGui
+
+-- Button Click Event to Hide the Message
+button.MouseButton1Click:Connect(function()
+    textLabel.Visible = false
+end)
+
+-- Make the Title, TextLabel, and Button visible
+titleLabel.Visible = true
+textLabel.Visible = true
+button.Visible = true
