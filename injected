@@ -1,0 +1,4 @@
+local Notify = function(_Title, _Text , Time)
+    StarterGui:SetCore("SendNotification", {Title = _Title, Text = _Text, Icon = "rbxassetid://88569786371432", Duration = Time})
+end
+
